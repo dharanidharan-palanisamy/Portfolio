@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Theme Configuration
 const THEMES = {
   DARK: "dark",
@@ -383,18 +382,3 @@ const ThemeUtils = {
 if (typeof module !== "undefined" && module.exports) {
   module.exports = { ThemeToggle, ThemeUtils, THEMES }
 }
-=======
-(function () {
-    [...document.querySelectorAll(".control")].forEach(button => {
-        button.addEventListener("click", function() {
-            document.querySelector(".active-btn").classList.remove("active-btn");
-            this.classList.add("active-btn");
-            document.querySelector(".active").classList.remove("active");
-            document.getElementById(button.dataset.id).classList.add("active");
-        })
-    });
-    document.querySelector(".theme-btn").addEventListener("click", () => {
-        document.body.classList.toggle("light-mode");
-    })
-})();
->>>>>>> 1d4c4cd56dc96bea67415572fc7baf2a44740df4
