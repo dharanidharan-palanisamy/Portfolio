@@ -4,7 +4,7 @@ import "../styles/style.css";
 
 // import PDFs from src so webpack bundles and returns a usable URL
 import MongoDBPDF from "./Certifications/dharanidharan-p-MongoDB-certificate.pdf";
-import UIUXPDF from "./Certifications/UI UX with Adobe XD and Figma.pdf";
+import UIUXPDF from "./Certifications/UI UX Design Using Figma.pdf";
 import WebDesignPDF from "./Certifications/Web Design HTML, CSS.pdf";
 
 const Certifications = () => {

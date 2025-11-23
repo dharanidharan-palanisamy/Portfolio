@@ -79,6 +79,14 @@ const Skills = () => {
               ReactJS
             </div>
           </div>
+
+          <div className="skill-item">
+            <div className="skill-name">
+              <i className="fab fa-python" style={{ color: "#FFD43B" }}></i>
+              Python
+            </div>
+          </div>
+
         </div>
 
         {/* ===== Development Tools ===== */}
@@ -102,10 +110,11 @@ const Skills = () => {
           </div>
           <div className="skill-item">
             <div className="skill-name">
-              <i className="fab fa-figma" style={{ color: "#f24e1e" }}></i>
+              <i className="fas fa-palette" style={{ color: "#7C3AED" }}></i>
               Canva
             </div>
           </div>
+
         </div>
       </div>
     </section>

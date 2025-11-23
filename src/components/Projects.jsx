@@ -48,6 +48,18 @@ const projects = [
     link:
       "https://www.figma.com/proto/VLyFNsr9EeeyhiQihb5NfM/Dharani-Dharan?page-id=374%3A66&node-id=395-8883&viewport=231%2C368%2C0.05&t=qHCW5Idg9iuiYMBb-9&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=395%3A8883&show-proto-sidebar=1",
   },
+  {
+  id: 5,
+  category: "uiux",
+  icon: "fas fa-shoe-prints",
+  title: "Shoe Ordering App Design",
+  description:
+    "A clean and stylish shoe shopping experience featuring product discovery, category-based browsing, detailed shoe previews, size & color selection, wishlist, cart management, and a smooth checkout flow.",
+  tech: ["Figma", "Design System", "Interactive Prototype"],
+  link:
+    "https://www.figma.com/proto/VLyFNsr9EeeyhiQihb5NfM/Dharani-Dharan?page-id=374%3A66&node-id=473-3912&viewport=104%2C173%2C0.08&t=j5UYR6ttxkEMs0SC-9&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=473%3A3912&show-proto-sidebar=1", // replace with your real link
+},
+
 
   // Web
   {
