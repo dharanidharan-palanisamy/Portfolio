@@ -1,0 +1,86 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Project {
+  id               String   @id @default(cuid())
+  title            String
+  slug             String   @unique
+  shortDescription String
+  longDescription  String?
+  projectType      String
+  category         String
+  role             String
+  year             String
+  liveUrl          String?
+  githubUrl        String?
+  coverImage       String?
+  status           String   @default("DRAFT") // DRAFT, PUBLISHED, ARCHIVED
+  displayOrder     Int      @default(0)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+model Experience {
+  id               String   @id @default(cuid())
+  company          String
+  position         String
+  duration         String
+  responsibilities String   // Store as JSON string or comma-separated
+  displayOrder     Int      @default(0)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+model Education {
+  id           String   @id @default(cuid())
+  institution  String
+  degree       String
+  year         String
+  displayOrder Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model SkillCategory {
+  id           String   @id @default(cuid())
+  title        String
+  displayOrder Int      @default(0)
+  skills       Skill[]
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Skill {
+  id           String        @id @default(cuid())
+  name         String
+  categoryId   String
+  category     SkillCategory @relation(fields: [categoryId], references: [id])
+  displayOrder Int           @default(0)
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+}
+
+model Certification {
+  id           String   @id @default(cuid())
+  title        String
+  provider     String
+  link         String?
+  displayOrder Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}

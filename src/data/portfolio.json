@@ -1,0 +1,132 @@
+{
+  "education": [
+    {
+      "institution": "Kongu Engineering College",
+      "degree": "B.E. in Computer Science and Engineering",
+      "year": "2023 - 2026"
+    },
+    {
+      "institution": "Kongu Polytechnic College",
+      "degree": "Diploma in Computer Science and Engineering",
+      "year": "2020 - 2023"
+    },
+    {
+      "degree": "Higher Secondary Education",
+      "institution": "A.E.T Matriculation Higher Secondary School",
+      "year": "2015 - 2020"
+    }
+  ],
+  "skills": [
+    {
+      "title": "UI Design",
+      "category": "Design"
+    },
+    {
+      "title": "UX Design",
+      "category": "Design"
+    },
+    {
+      "title": "Product Design",
+      "category": "Design"
+    },
+    {
+      "title": "Interaction Design",
+      "category": "Design"
+    },
+    {
+      "title": "Responsive Design",
+      "category": "Design"
+    },
+    {
+      "title": "Design Systems",
+      "category": "Design"
+    },
+    {
+      "title": "HTML",
+      "category": "Development"
+    },
+    {
+      "title": "CSS",
+      "category": "Development"
+    },
+    {
+      "title": "JavaScript",
+      "category": "Development"
+    },
+    {
+      "title": "React",
+      "category": "Development"
+    },
+    {
+      "title": "Next.js",
+      "category": "Development"
+    },
+    {
+      "title": "Figma",
+      "category": "Tools"
+    },
+    {
+      "title": "FigJam",
+      "category": "Tools"
+    },
+    {
+      "title": "VS Code",
+      "category": "Tools"
+    },
+    {
+      "title": "Git",
+      "category": "Tools"
+    },
+    {
+      "title": "GitHub",
+      "category": "Tools"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "MongoDB Certified Associate Developer",
+      "provider": "MongoDB",
+      "year": "2025",
+      "link": "/certifications/cert_1791013609665_tvfe4ee.jpg"
+    },
+    {
+      "title": "UI/UX Design",
+      "provider": "Udemy",
+      "year": "",
+      "link": "/certifications/cert_1791013740900_g5pfawz.pdf"
+    },
+    {
+      "title": "Web Design HTML & CSS",
+      "provider": "Udemy",
+      "year": "",
+      "link": "/certifications/cert_1791013752525_i4nxncr.pdf"
+    }
+  ],
+  "projects": [],
+  "contact": {
+    "email": "bdharanidharan2005@gmail.com ",
+    "phone": "+91 8870210964",
+    "location": "Erode, Tamil Nadu",
+    "whatsappLink": "+91 8870210964"
+  },
+  "hero": {
+    "greeting": "HELLO, I'M",
+    "name": "DHARANI DHARAN",
+    "title": "UI/UX Designer, Full Stack Developer",
+    "subtitle": "I design intuitive digital experiences and build modern web products that turn complex ideas into simple, engaging solutions.",
+    "primaryButtonText": "View Selected Work",
+    "secondaryButtonText": "Let's Work Together"
+  },
+  "about": {
+    "heading": "DESIGNING\nWITH PURPOSE.",
+    "description": "I'm Dharani Dharan, a UI/UX Designer and Web Developer focused on creating intuitive, meaningful and visually refined digital experiences.\n\nI combine design thinking, visual design, and technical expertise to transform complex ideas into simple, intuitive, and usable digital products.",
+    "tags": [
+      "UI/UX Design",
+      "Product Design",
+      "Web Design",
+      "Interaction Design",
+      "Design Systems",
+      "Frontend Understanding"
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--bg);
+  --color-secondary: var(--secondary);
+  --color-surface: var(--surface);
+  
+  --color-foreground: var(--fg);
+  --color-muted: var(--muted);
+  
+  --color-border: var(--border);
+  
+  --color-accent: var(--accent);
+  
+  --font-sans: var(--font-manrope);
+}
+
+@layer base {
+  :root {
+    --bg: #FAFAFA;
+    --secondary: #F4F4F5;
+    --surface: #FFFFFF;
+    --fg: #09090B;
+    --muted: #71717A;
+    --border: #E4E4E7;
+    --accent: #111111; /* Sleek dark accent for light mode */
+  }
+
+  .dark {
+    --bg: #0A0A0A;
+    --secondary: #111111;
+    --surface: #151515;
+    --fg: #F5F5F5;
+    --muted: #A1A1A1;
+    --border: #242424;
+    --accent: #60A5FA; /* Professional light blue */
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), sans-serif;
+  antialiased: true;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+}
+
+/* Scrollbar styles for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}
