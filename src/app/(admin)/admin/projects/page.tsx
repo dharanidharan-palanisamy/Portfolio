@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import { Plus, Edit2, Trash2, Save, X } from "lucide-react";
 
 export default function ProjectsPage() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState<any[]>([]);
   const [isEditing, setIsEditing] = useState(false);
-  const [editingId, setEditingId] = useState(null);
-  const [formData, setFormData] = useState({});
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const [formData, setFormData] = useState<any>({});
 
   useEffect(() => {
     fetch('/api/projects')
@@ -29,7 +29,7 @@ export default function ProjectsPage() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isEditing]);
 
-  const saveToServer = async (newData) => {
+  const saveToServer = async (newData: any) => {
     try {
       await fetch('/api/projects', {
         method: 'POST',
@@ -41,7 +41,7 @@ export default function ProjectsPage() {
     }
   };
 
-  const handleOpenForm = (id = null) => {
+  const handleOpenForm = (id: any = null) => {
     if (id !== null) {
       const proj = items.find(i => i.id === id);
       setFormData({...proj});
@@ -57,7 +57,7 @@ export default function ProjectsPage() {
     setIsEditing(true);
   };
 
-  const handleDelete = (id) => {
+  const handleDelete = (id: any) => {
     if (confirm("Are you sure?")) {
       const newData = items.filter(i => i.id !== id);
       setItems(newData);
@@ -71,11 +71,11 @@ export default function ProjectsPage() {
     // Ensure technologies is an array if edited as comma separated string
     let finalData = {...formData};
     if (typeof finalData.technologies === 'string') {
-      finalData.technologies = finalData.technologies.split(',').map(s => s.trim()).filter(s => s.length > 0);
+      finalData.technologies = finalData.technologies.split(',').map((s: any) => s.trim()).filter((s: any) => s.length > 0);
     }
     
     if (typeof finalData.process === 'string') {
-      finalData.process = finalData.process.split(',').map(s => s.trim()).filter(s => s.length > 0);
+      finalData.process = finalData.process.split(',').map((s: any) => s.trim()).filter((s: any) => s.length > 0);
     }
 
     if (!finalData.slug) {

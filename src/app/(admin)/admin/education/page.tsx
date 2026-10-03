@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import { Plus, Edit2, Trash2, Save, X } from "lucide-react";
 
 export default function EducationPage() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState<any[]>([]);
   const [isEditing, setIsEditing] = useState(false);
-  const [editingIndex, setEditingIndex] = useState(null);
-  const [formData, setFormData] = useState({});
+  const [editingIndex, setEditingIndex] = useState<number | null>(null);
+  const [formData, setFormData] = useState<any>({});
 
   useEffect(() => {
     fetch('/api/portfolio')
@@ -29,7 +29,7 @@ export default function EducationPage() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isEditing]);
 
-  const saveToServer = async (newData) => {
+  const saveToServer = async (newData: any) => {
     try {
       await fetch('/api/portfolio', {
         method: 'POST',
@@ -41,7 +41,7 @@ export default function EducationPage() {
     }
   };
 
-  const handleOpenForm = (index = null) => {
+  const handleOpenForm = (index: any = null) => {
     if (index !== null) {
       setFormData(items[index]);
       setEditingIndex(index);
@@ -52,7 +52,7 @@ export default function EducationPage() {
     setIsEditing(true);
   };
 
-  const handleDelete = (index) => {
+  const handleDelete = (index: any) => {
     if (confirm("Are you sure?")) {
       const newData = [...items];
       newData.splice(index, 1);

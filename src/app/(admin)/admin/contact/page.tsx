@@ -22,7 +22,7 @@ export default function ContactInfoPage() {
       });
   }, []);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     setIsSaving(true);
     try {
